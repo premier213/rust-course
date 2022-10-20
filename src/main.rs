@@ -1,4 +1,12 @@
+// use std::str::pattern;
+
 use crate::{arrays::array_type, crates::arch::archive_file as arc, random::random};
+use if_statement::statement;
+use matches::{
+    matching, matching_name,
+    Level::{Easy, Hard, Middle},
+};
+use pattern::pattern_type;
 use rand::prelude::*;
 use slices::slice_type;
 use structures::struct_type;
@@ -11,7 +19,9 @@ mod enums;
 mod generics;
 mod if_statement;
 mod input;
+mod matches;
 mod nested_mod;
+mod pattern;
 mod random;
 mod slices;
 mod strings;
@@ -37,5 +47,9 @@ fn main() {
     // struct_type();
     // enums::enum_type();
     // generics::generic_types();
-    if_statement::statement()
+    // statement();
+    // matching(Easy);
+    // matching_name(String::from("ali"));
+    // println!("{}", pattern_type(12));
+    pattern::tuple_pattern(5, -200);
 }
