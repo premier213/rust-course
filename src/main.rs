@@ -1,6 +1,7 @@
 // use std::str::pattern;
 
 use crate::{arrays::array_type, crates::arch::archive_file as arc, random::random};
+use forloop::for_type;
 use if_statement::statement;
 use matches::{
     matching, matching_name,
@@ -12,10 +13,12 @@ use slices::slice_type;
 use structures::struct_type;
 use tuples::tuple_type;
 use vectors::vector_type;
+use while_loop::{loop_standalone, while_type};
 mod arrays;
 mod borrowing;
 mod crates;
 mod enums;
+mod forloop;
 mod generics;
 mod if_statement;
 mod input;
@@ -29,6 +32,8 @@ mod structures;
 mod tuples;
 mod variable;
 mod vectors;
+mod while_loop;
+
 fn main() {
     // let mut range = rand::thread_rng();
     // let a: u32 = range.gen();
@@ -51,5 +56,8 @@ fn main() {
     // matching(Easy);
     // matching_name(String::from("ali"));
     // println!("{}", pattern_type(12));
-    pattern::tuple_pattern(5, -200);
+    // pattern::tuple_pattern(5, -200);
+    // for_type();
+    // while_type(100);
+    loop_standalone(5000);
 }
