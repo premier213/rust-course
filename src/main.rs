@@ -9,6 +9,7 @@ use matches::{
     matching, matching_name,
     Level::{Easy, Hard, Middle},
 };
+use mutable_trait::mut_sum;
 use pattern::pattern_type;
 use rand::prelude::*;
 use slices::slice_type;
@@ -22,21 +23,30 @@ mod arrays;
 mod borrowing;
 mod closures;
 mod crates;
+mod dynamic_dispatch;
 mod enums;
+mod files;
 mod forloop;
 mod generic_traits;
 mod generics;
 mod hofs;
 mod if_statement;
 mod input;
+mod lifetime;
 mod macros;
 mod matches;
+mod mutable_trait;
 mod nested_mod;
+mod overloading;
+mod ownership;
 mod pattern;
 mod random;
+mod reference;
 mod slices;
+mod static_dispatch;
 mod strings;
 mod structures;
+mod trait_return;
 mod traits;
 mod tuples;
 mod unsafes;
@@ -76,5 +86,13 @@ fn main() {
     // hof_type(square, 2);
     // macros::macro_type();
     // traits::tr();
-    generic_traits::gn()
+    // generic_traits::gn();
+    // trait_return::trait_ret();
+    // mutable_trait::mut_sum();
+    // overloading::over();
+    // static_dispatch::stat()
+    // ownership::owner()
+    // lifetime::life();
+    // reference::reference();
+    files::files();
 }
