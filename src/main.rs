@@ -24,7 +24,9 @@ mod borrowing;
 mod closures;
 mod crates;
 mod dynamic_dispatch;
+mod enum_err;
 mod enums;
+mod error_handling;
 mod files;
 mod forloop;
 mod generic_traits;
@@ -37,6 +39,7 @@ mod macros;
 mod matches;
 mod mutable_trait;
 mod nested_mod;
+mod operator;
 mod overloading;
 mod ownership;
 mod pattern;
@@ -94,5 +97,8 @@ fn main() {
     // ownership::owner()
     // lifetime::life();
     // reference::reference();
-    files::files();
+    // files::files();
+    // error_handling::err()
+    // enum_err::err(Some(1));
+    operator::operator();
 }
