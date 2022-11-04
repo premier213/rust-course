@@ -22,6 +22,7 @@ use while_loop::{loop_standalone, while_type};
 mod arrays;
 mod borrowing;
 mod closures;
+mod concurrency;
 mod crates;
 mod dynamic_dispatch;
 mod enum_err;
@@ -100,5 +101,8 @@ fn main() {
     // files::files();
     // error_handling::err()
     // enum_err::err(Some(1));
-    operator::operator();
+    // operator::operator();
+    // concurrency::threads::thread();
+    // concurrency::channels::channel();
+    concurrency::mutex::mutex();
 }
